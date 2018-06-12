@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href= "style.css" />
+    <style>
+        body {
+            background-image: url("https://78.media.tumblr.com/daf55098d9c3f6d7cabcd66c2d6038a6/tumblr_muhbptPQq41qa0n48o4_r1_250.gif");
+            text-align: center;
+            background-size: 600px;
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <img id="gif" src="" />
+    <p></p>
+    <button onclick="getGiphyData()">yes</button>
+    
+    
+    <script>
+        function getGiphyData(){
+            // var searchTerm = document.querySelector('#userInput').value
+            var searchTerm = 'chris traeger';
+            var url='https://api.giphy.com/v1/gifs/search?api_key=JvJElIRJSzM67qtmqbEV3tlGZptX2Xa8&q='+searchTerm
+            
+            fetch(url)
+            .then( data => {
+              return data.json()
+             })
+              .then( json => {
+                console.log(json)
+                
+                var arrayOfGifs = json.data
+                var rand = Math.floor(Math.random() * arrayOfGifs.length)
+                var firstGif = arrayOfGifs[rand].images.fixed_width.url
+                document.querySelector("#gif").setAttribute('src', firstGif)
+             })
+            .catch( error => {
+                console.log(error)
+            })
+        }
+        getGiphyData()
+    </script>
+   
+</body>

@@ -1,0 +1,35 @@
+<head>
+    <title> API Project</title>
+    <style></style>
+</head>
+
+<body>
+    <h1>hey</h1>
+    <img id="gif" src="" />
+    <p>type something to search here:<input id="userInput"/></p>
+    <button onclick="getGiphyData()">Get a GIF</button>
+    
+    <script>
+        function getGiphyData(){
+            var searchTerm = document.querySelector('#userInput').value
+            var url='https://api.giphy.com/v1/gifs/search?api_key=JvJElIRJSzM67qtmqbEV3tlGZptX2Xa8&q='+searchTerm
+            
+            fetch(url)
+            .then( data => {
+              return data.json()
+             })
+              .then( json => {
+                console.log(json)
+                
+                var arrayOfGifs = json.data
+                var rand = Math.floor(Math.random() * arrayOfGifs.length)
+                var firstGif = arrayOfGifs[rand].images.fixed_width.url
+                document.querySelector("#gif").setAttribute('src', firstGif)
+
+             })
+            .catch( error => {
+                console.log(error)
+            })
+        }
+    </script>
+</body>

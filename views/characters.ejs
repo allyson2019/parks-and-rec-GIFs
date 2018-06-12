@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>  
+   <style>
+    body {
+      background:#00bfa5;
+      color: white;
+      text-align:center;
+    }
+     .card-image-thingee {
+       width: 250px;
+       height: 250px;
+     }
+    .card-content {
+      color: black;
+    }
+    .card-action {
+      color:#26a69a;
+    }
+   </style>
+</head>
+<body>
+    <nav>
+    <div class="nav-wrapper orange lighten-2">
+          <a href="/" class="brand-logo center">Parks and Rec Gifs</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/characters">Characters</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+          </ul>
+        </div>
+     </nav>
+   <div class="container">
+       <h1>Characters</h1>
+   </div>
+   
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="http://cdn.playbuzz.com/cdn/173e8dc2-5516-41c1-8e34-43bf6f03b6d8/74395ba4-9272-48b1-8d3f-839a0e53cfef_560_420.jpg">
+              <span class="card-title">Ron Swanson</span>
+            </div>
+            <div class="card-content">
+              <p>Keep your tears in your eyes where they belong.</p>
+            </div>
+            <div class="card-action">
+              <a href="/ron">let us indulge in this waste of time</a>
+            </div>
+          </div>
+        </div>
+ 
+         <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://uproxx.files.wordpress.com/2013/03/benwyatt-calzones.jpg?quality=95&w=650&_sm_byp=iVVdvf5s7TMT7rRM">
+              <span class="card-title">Ben Wyatt</span>
+             </div>
+          <div class="card-content">
+            <p>The clazones... betrayed me?</p>
+          </div>
+          <div class="card-action">
+            <a href="/ben">I like calzones :(</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+ 
+         <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="http://cdn.playbuzz.com/cdn/37c5735e-d2ab-4678-8697-ea792ac630ef/2d99aa19-739d-404c-808b-3d3c2db9cf3d.png?_sm_byp=iVVdvf5s7TMT7rRM">
+              <span class="card-title">Ann Perkins</span>
+             </div>
+          <div class="card-content">
+            <p>My body is like a chip too. Potato chip.</p>
+          </div>
+          <div class="card-action">
+            <a href="/ann">ahhhhhh</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+  
+          <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://ih1.redbubble.net/image.280720081.2870/flat,800x800,070,f.jpg?_sm_byp=iVVdvf5s7TMT7rRM">
+              <span class="card-title">Chris Traeger</span>
+             </div>
+          <div class="card-content">
+            <p>
+              I am 100% certain that I am 0% sure of what I am going to do.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="/chris">what a wonderful source of joy</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+  
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://dd2d9j2i66w9u.cloudfront.net/wp-content/uploads/2016/01/14155451/Screen-Shot-2016-01-14-at-3.45.41-PM-660x330.png">
+              <span class="card-title">April Ludgate</span>
+            </div>
+            <div class="card-content">
+              <p>If you ever speak to me in Spanish, please use the formal "usted".</p>
+            </div>
+            <div class="card-action">
+              <a href="/april">get some GIFs I guess</a>
+              <onclick="getGiphyData()"></button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="http://quotesnew.com/wp-content/uploads/2017/03/15-leslie-knope-quotes-to-chant-in-the-mirror-when-the-89645.jpg">
+              <span class="card-title">Leslie Knope</span>
+             </div>
+            <div class="card-content">
+              <p>I stand by my decision to avoid salad and other disgusting things.</p>
+            </div>
+            <div class="card-action">
+              <a href="/leslie">LET'S GO GET SOME GIFS</a>
+            </div>
+          </div>
+        </div>
+    
+        
+          <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://ddydc3qiky-flywheel.netdna-ssl.com/wp-content/uploads/2016/10/tumblr_m9k8v0MpPa1qbt1x6o1_1280.png?_sm_byp=iVVdvf5s7TMT7rRM">
+              <span class="card-title">Donna Meagle</span>
+             </div>
+          <div class="card-content">
+            <p>Stay away from wine, wine is crying juice.</p>
+          </div>
+          <div class="card-action">
+            <a href="/donna">keep it on the low</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://assets.change.org/photos/1/rh/cw/GZRhcWVtnIhrLhZ-1600x900-noPad.jpg?1509741698">
+              <span class="card-title">Andy Dwyer</span>
+             </div>
+          <div class="card-content">
+            <p>I have no idea what I'm doing, but I know I'm doing it really, really well.</p>
+          </div>
+          <div class="card-action">
+            <a href="/andy">bert macklin is on the case</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+      
+       
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="card-image-thingee" src="https://1.bp.blogspot.com/-clS85qwX9oM/Vzsomrg1-VI/AAAAAAAAdLs/WKGcaHtCoRIVRLclqI8kFcAHK8crNj0fACKgB/s1600/635926603300435459-1921418490_imrs.jpeg">
+              <span class="card-title">Tom Haverford</span>
+             </div>
+          <div class="card-content">
+            <p>Sometimes you gotta work a little, so you can ball a lot.</p>
+          </div>
+          <div class="card-action">
+            <a href="/tom">Get some Tommy GIFs!</a>
+            <onclick="getGiphyData()"></button>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</body>

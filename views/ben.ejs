@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href= "style.css" />
+    <style>
+        body {
+            background-image: url("https://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2011/8/16/0/CCKEL213_Three-Cheese-Caprese-Calzone_s4x3.jpg.rend.hgtvcom.616.462.suffix/1416848374254.jpeg");
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <img id="gif" src="" />
+    <p></p>
+    <button onclick="getGiphyData()">I like calzones :(</button>
+    
+    
+    <script>
+        function getGiphyData(){
+            // var searchTerm = document.querySelector('#userInput').value
+            var searchTerm = 'ben wyatt';
+            var url='https://api.giphy.com/v1/gifs/search?api_key=JvJElIRJSzM67qtmqbEV3tlGZptX2Xa8&q='+searchTerm
+            
+            fetch(url)
+            .then( data => {
+              return data.json()
+             })
+              .then( json => {
+                console.log(json)
+                
+                var arrayOfGifs = json.data
+                var rand = Math.floor(Math.random() * arrayOfGifs.length)
+                var firstGif = arrayOfGifs[rand].images.fixed_width.url
+                document.querySelector("#gif").setAttribute('src', firstGif)
+             })
+            .catch( error => {
+                console.log(error)
+            })
+        }
+        getGiphyData()
+    </script>
+   
+</body>

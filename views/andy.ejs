@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href= "style.css" />
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/originals/89/20/da/8920daecdaf2d7c5e4678aa3475df608.jpg");
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <img id="gif" src="" />
+    <p></p>
+    <button onclick="getGiphyData()">Get SOME</button>
+    
+    
+    <script>
+        function getGiphyData(){
+            // var searchTerm = document.querySelector('#userInput').value
+            var searchTerm = 'andy dwyer';
+            var url='https://api.giphy.com/v1/gifs/search?api_key=JvJElIRJSzM67qtmqbEV3tlGZptX2Xa8&q='+searchTerm
+            
+            fetch(url)
+            .then( data => {
+              return data.json()
+             })
+              .then( json => {
+                console.log(json)
+                
+                var arrayOfGifs = json.data
+                var rand = Math.floor(Math.random() * arrayOfGifs.length)
+                var firstGif = arrayOfGifs[rand].images.fixed_width.url
+                document.querySelector("#gif").setAttribute('src', firstGif)
+             })
+            .catch( error => {
+                console.log(error)
+            })
+        }
+        getGiphyData()
+    </script>
+   
+</body>
